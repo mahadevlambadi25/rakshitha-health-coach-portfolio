@@ -5,7 +5,7 @@
 .video-player-wrapper {
   width: 100%;
   max-width: 880px;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.85rem;
   box-shadow: var(--shadow-lg);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -50,7 +50,7 @@
   .video-player-wrapper {
     border-width: 3px;
     border-radius: var(--radius-md);
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 }
 

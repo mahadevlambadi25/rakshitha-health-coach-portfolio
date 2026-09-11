@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.75rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 0;
   position: relative;
 }
 
@@ -14,7 +14,7 @@
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 2.5rem 1.75rem;
+  padding: 2.25rem 1.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .step-title {
@@ -74,7 +74,7 @@
   .steps-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 
   .step-card {

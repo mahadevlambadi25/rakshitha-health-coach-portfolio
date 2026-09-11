@@ -8,15 +8,15 @@
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: 3.5rem 3rem;
-  margin-bottom: 3.5rem;
+  padding: 2.75rem 2.5rem;
+  margin-bottom: 0;
   box-shadow: var(--shadow-sm);
 }
 
 .reviews-rating-header {
   text-align: center;
   max-width: 580px;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.75rem;
 }
 
 .rating-stars-row {
@@ -49,7 +49,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .review-pillar-card {
@@ -159,7 +159,7 @@
   .reviews-showcase-card {
     padding: 1.5rem 1.25rem;
     border-radius: var(--radius-lg);
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 
   .reviews-rating-header {
