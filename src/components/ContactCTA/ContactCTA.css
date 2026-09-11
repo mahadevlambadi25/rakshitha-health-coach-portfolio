@@ -1,0 +1,161 @@
+.contact-section {
+  background-color: var(--color-bg);
+  padding: 5rem 0;
+}
+
+.contact-card {
+  background: linear-gradient(145deg, #1b382c 0%, #254b3b 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 4rem 3.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(217, 125, 84, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background-color: rgba(37, 211, 102, 0.18);
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  color: #a3f7c3;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-headline {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.contact-subtext {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.65;
+}
+
+/* Goal Selector */
+.goal-selector-wrapper {
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goal-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e8f1ec;
+  margin-bottom: 0.85rem;
+}
+
+.goal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.goal-tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.goal-tag:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.goal-tag.active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Action Box */
+.contact-action-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.contact-whatsapp-btn {
+  padding: 1.1rem 2.5rem;
+  font-size: 1.15rem;
+}
+
+.response-time {
+  font-size: 0.85rem;
+  color: #b0c9bd;
+}
+
+/* Details Bar */
+.contact-details-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-icon {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 2.75rem 1.75rem;
+  }
+
+  .contact-headline {
+    font-size: 2rem;
+  }
+
+  .contact-details-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}

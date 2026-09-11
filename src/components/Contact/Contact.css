@@ -1,0 +1,216 @@
+.contact-section {
+  background-color: var(--color-bg);
+  padding: 5rem 0;
+}
+
+.contact-premium-card {
+  background: linear-gradient(145deg, #163327 0%, #204536 100%);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 4.5rem 3.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-premium-card::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(200, 108, 67, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1.1rem;
+  background-color: rgba(37, 211, 102, 0.18);
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  color: #a3f7c3;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.contact-heading {
+  font-family: var(--font-heading);
+  font-size: 2.85rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  line-height: 1.2;
+}
+
+.contact-lead-text {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.65;
+}
+
+.contact-details-box {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 2.5rem;
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.coach-profile-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.profile-leaf-badge {
+  font-size: 1.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-name {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.profile-title {
+  font-size: 0.85rem;
+  color: #c8e6d9;
+}
+
+.phone-direct-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.phone-icon {
+  font-size: 1.35rem;
+}
+
+.phone-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.phone-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.phone-number-link {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #25d366;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.phone-number-link:hover {
+  color: #a3f7c3;
+}
+
+.contact-cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Visually attractive, not oversized, rounded corners, subtle hover animation, easy to tap */
+.whatsapp-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--color-whatsapp);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 0.95rem 2.25rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  text-decoration: none;
+  min-height: 48px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatsapp-contact-button:hover {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-contact-button:active {
+  transform: translateY(0);
+}
+
+.whatsapp-btn-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.contact-prefill-note {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+.contact-prefill-note em {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .contact-premium-card {
+    padding: 3rem 1.75rem;
+  }
+
+  .contact-heading {
+    font-size: 2.1rem;
+  }
+
+  .contact-details-box {
+    padding: 1.5rem;
+  }
+
+  .phone-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .whatsapp-contact-button {
+    width: 100%;
+    max-width: 320px;
+  }
+}

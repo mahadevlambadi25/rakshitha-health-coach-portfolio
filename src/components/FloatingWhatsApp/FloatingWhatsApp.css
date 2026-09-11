@@ -1,0 +1,83 @@
+.floating-whatsapp-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+.floating-whatsapp-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-whatsapp);
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  position: relative;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.floating-whatsapp-link:hover,
+.floating-whatsapp-link:focus-visible {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+.floating-whatsapp-svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Accessible Tooltip on hover / focus */
+.floating-label-text {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  background-color: var(--color-forest);
+  color: #ffffff;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.floating-label-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--color-forest);
+}
+
+.floating-whatsapp-link:hover .floating-label-text,
+.floating-label-text.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 640px) {
+  .floating-whatsapp-container {
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .floating-whatsapp-link {
+    width: 48px;
+    height: 48px;
+  }
+}

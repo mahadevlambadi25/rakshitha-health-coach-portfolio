@@ -1,0 +1,29 @@
+/* ==========================================================================
+   App-level layout and alternating section backgrounds
+   ========================================================================== */
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Section Background Variations */
+.section-alt {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.section-tint {
+  background-color: var(--color-primary-subtle);
+}
+
+.section-dark {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-inverse);
+}
