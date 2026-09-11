@@ -151,13 +151,49 @@
 }
 
 @media (max-width: 600px) {
+  .site-footer {
+    padding: 3.5rem 0 2rem;
+  }
+
   .footer-top-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .brand-title-main {
+    font-size: 1.45rem;
+  }
+
+  .footer-col-title {
+    margin-bottom: 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-nav-list {
+    gap: 0.4rem;
+  }
+
+  .footer-nav-list a {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .social-footer-link {
+    min-height: 38px;
+  }
+
+  .footer-health-notice {
+    padding: 0.85rem 1rem;
+    font-size: 0.76rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
   }
 
   .footer-copyright-row {
     flex-direction: column;
     text-align: center;
+    gap: 0.35rem;
   }
 }

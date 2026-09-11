@@ -3,6 +3,7 @@
 }
 
 .video-player-wrapper {
+  width: 100%;
   max-width: 880px;
   margin: 0 auto 2.5rem;
   box-shadow: var(--shadow-lg);
@@ -10,12 +11,14 @@
   overflow: hidden;
   border: 6px solid #ffffff;
   background-color: #000000;
+  box-sizing: border-box;
 }
 
 .video-responsive-container {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
 }
 
 .video-iframe {
@@ -38,7 +41,7 @@
 }
 
 .video-caption-box p {
-  font-size: 1rem;
+  font-size: clamp(0.92rem, 3vw, 1rem);
   color: var(--color-text-body);
   line-height: 1.6;
 }
@@ -47,5 +50,12 @@
   .video-player-wrapper {
     border-width: 3px;
     border-radius: var(--radius-md);
+    margin-bottom: 1.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .video-player-wrapper {
+    border-width: 2px;
   }
 }

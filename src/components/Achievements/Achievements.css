@@ -142,8 +142,13 @@
 }
 
 @media (max-width: 480px) {
+  .differentiators-box {
+    padding: 1.25rem 1rem;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .diff-footer {

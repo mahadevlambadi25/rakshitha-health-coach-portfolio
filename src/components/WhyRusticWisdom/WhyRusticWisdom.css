@@ -159,10 +159,68 @@
 @media (max-width: 768px) {
   .why-cards-grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   .why-card {
-    padding: 1.75rem;
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .wellness-spotlight-card {
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 2rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .wellness-spotlight-img-wrap {
+    max-width: min(280px, 80vw);
+    margin: 0 auto;
+    max-height: 280px;
+    border-radius: var(--radius-md);
+  }
+
+  .spotlight-title {
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
+
+  .spotlight-text {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .spotlight-trust-tags {
+    gap: 0.45rem;
+  }
+
+  .spotlight-badge {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .why-card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .why-card-title {
+    font-size: 1.15rem;
+  }
+
+  .why-card-desc {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .wellness-spotlight-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .why-card {
+    padding: 1.25rem 1rem;
   }
 }

@@ -69,6 +69,8 @@ html {
   scroll-padding-top: 86px;
   font-size: 16px;
   color-scheme: light;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -78,7 +80,8 @@ body {
   line-height: 1.68;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 img,
@@ -109,13 +112,31 @@ button {
   padding: 0 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 .section {
   padding: 5.5rem 0;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 4rem 0;
+    padding: 3.75rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3.25rem 0;
   }
 }
 
@@ -124,6 +145,12 @@ button {
   text-align: center;
   max-width: 720px;
   margin: 0 auto 3.5rem;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
 }
 
 .section-badge {
@@ -148,22 +175,17 @@ button {
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
   font-weight: 700;
   color: var(--color-forest);
   line-height: 1.22;
   margin-bottom: 1.1rem;
   letter-spacing: -0.015em;
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
+  word-break: break-word;
 }
 
 .section-subtitle {
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
   color: var(--color-text-body);
   line-height: 1.65;
 }
@@ -174,23 +196,26 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  padding: 0.9rem 1.8rem;
+  padding: 0.85rem 1.8rem;
   font-size: 0.98rem;
   font-weight: 600;
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
   text-align: center;
   white-space: nowrap;
+  min-height: 48px;
 }
 
 .btn-sm {
   padding: 0.6rem 1.25rem;
   font-size: 0.88rem;
+  min-height: 44px;
 }
 
 .btn-lg {
-  padding: 1.05rem 2.2rem;
-  font-size: 1.05rem;
+  padding: 1rem 2.2rem;
+  font-size: 1.02rem;
+  min-height: 50px;
 }
 
 .btn-primary {
@@ -255,6 +280,20 @@ button {
   color: var(--color-earth);
   font-size: 1.2rem;
   line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .trust-strip-banner {
+    gap: 0.5rem 0.85rem;
+    padding: 0.85rem 1.15rem;
+    font-size: 0.82rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+
+  .trust-dot {
+    display: none;
+  }
 }
 
 /* Accessibility Focus */

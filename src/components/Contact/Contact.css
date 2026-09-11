@@ -191,16 +191,38 @@
 }
 
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 3.5rem 0;
+  }
+
   .contact-premium-card {
-    padding: 3rem 1.75rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius-lg);
   }
 
   .contact-heading {
-    font-size: 2.1rem;
+    font-size: clamp(1.75rem, 5.5vw, 2.3rem);
+    line-height: 1.22;
+    margin-bottom: 0.85rem;
+  }
+
+  .contact-lead-text {
+    font-size: clamp(0.95rem, 3.2vw, 1.05rem);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
   }
 
   .contact-details-box {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .phone-direct-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.35rem;
+    padding-top: 0.85rem;
   }
 
   .phone-info {
@@ -211,6 +233,27 @@
 
   .whatsapp-contact-button {
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-premium-card {
+    padding: 2rem 1.15rem 2.75rem;
+  }
+
+  .contact-details-box {
+    padding: 1.15rem 0.9rem;
+  }
+
+  .contact-prefill-note {
+    font-size: 0.78rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-premium-card {
+    padding: 1.75rem 0.85rem 2.25rem;
   }
 }

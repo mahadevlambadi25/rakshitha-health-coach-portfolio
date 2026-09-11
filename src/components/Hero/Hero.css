@@ -268,52 +268,174 @@
 }
 
 /* Responsiveness */
-@media (max-width: 992px) {
+@media (min-width: 861px) and (max-width: 1024px) {
   .hero-container {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
+    gap: 2rem;
   }
 
-  .hero-media {
-    order: -1;
+  .hero-title {
+    font-size: 2.85rem;
   }
 
   .float-card-coach {
-    right: 0;
+    right: -2%;
   }
 
   .float-card-highlight {
-    left: 0;
+    left: -2%;
   }
 }
 
-@media (max-width: 640px) {
-  .hero-title {
-    font-size: 2.35rem;
+@media (max-width: 860px) {
+  .hero-section {
+    padding: 2.5rem 0 3.5rem;
   }
 
-  .hero-cta-group {
+  .hero-container {
+    display: flex;
     flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-content {
+    display: contents;
+  }
+
+  /* 1. Small professional badge */
+  .hero-badge {
+    order: 1;
+    margin-bottom: 1.15rem;
+    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.95rem;
+  }
+
+  /* 2. Main heading */
+  .hero-title {
+    order: 2;
+    font-size: clamp(2.1rem, 7.5vw, 2.6rem);
+    line-height: 1.18;
+    margin-bottom: 1rem;
+    word-break: break-word;
+  }
+
+  /* 3. Short supporting text */
+  .hero-description {
+    order: 3;
+    font-size: clamp(0.95rem, 3.6vw, 1.05rem);
+    line-height: 1.62;
+    margin-bottom: 1.5rem;
+  }
+
+  /* 4. Primary CTA */
+  .hero-cta-group {
+    order: 4;
     width: 100%;
+    margin-bottom: 2rem;
+    flex-direction: column;
   }
 
   .hero-cta-group .btn {
     width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+    font-weight: 700;
   }
 
+  /* 5. Rakshitha's professional photo */
+  .hero-media {
+    order: 5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.75rem;
+  }
+
+  .coach-portrait-frame {
+    max-width: min(280px, 80vw);
+    width: 100%;
+  }
+
+  .portrait-image-wrapper {
+    border-radius: var(--radius-lg);
+    border: 5px solid #ffffff;
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4 / 4.8;
+    max-height: 330px;
+    background-color: var(--color-surface);
+  }
+
+  .coach-portrait-img {
+    object-position: center 15%;
+  }
+
+  /* Hide floating cards on mobile to keep layout clean and un-crowded */
+  .hero-float-card {
+    display: none;
+  }
+
+  /* 6. Trust statement box */
+  .hero-trust-box {
+    order: 6;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.85rem 1.15rem;
+  }
+
+  /* 7. Quick Stats (Compact 3-column row) */
   .hero-quick-stats {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    order: 7;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .quick-stat {
+    align-items: center;
+  }
+
+  .quick-stat-num {
+    font-size: 1.45rem;
+    line-height: 1.1;
+    margin-bottom: 0.2rem;
+  }
+
+  .quick-stat-lbl {
+    font-size: 0.72rem;
+    line-height: 1.25;
   }
 
   .stat-divider {
     display: none;
   }
+}
 
-  .float-card-coach,
-  .float-card-highlight {
-    position: static;
-    margin-top: 1rem;
+@media (max-width: 360px) {
+  .hero-section {
+    padding: 2rem 0 3rem;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .coach-portrait-frame {
+    max-width: 240px;
+  }
+
+  .portrait-image-wrapper {
+    max-height: 275px;
+  }
+
+  .quick-stat-num {
+    font-size: 1.25rem;
+  }
+
+  .quick-stat-lbl {
+    font-size: 0.68rem;
   }
 }

@@ -72,12 +72,21 @@
 
 @media (max-width: 640px) {
   .floating-whatsapp-container {
-    bottom: 18px;
-    right: 18px;
+    bottom: max(16px, env(safe-area-inset-bottom, 16px));
+    right: max(16px, env(safe-area-inset-right, 16px));
   }
 
   .floating-whatsapp-link {
     width: 48px;
     height: 48px;
+  }
+
+  .floating-whatsapp-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .floating-label-text {
+    display: none !important;
   }
 }

@@ -87,10 +87,40 @@
 @media (max-width: 640px) {
   .social-cards-wrapper {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .social-card {
-    padding: 1.75rem 1.5rem;
+    padding: 1.35rem 1.25rem;
+    gap: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .social-icon-box {
+    width: 52px;
+    height: 52px;
+  }
+
+  .social-icon-box svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .social-platform-title {
+    font-size: 1.18rem;
+  }
+
+  .social-handle {
+    font-size: 0.82rem;
+  }
+
+  .social-cta-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .social-card {
+    padding: 1.15rem 1rem;
   }
 }

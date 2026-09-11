@@ -6,10 +6,18 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 
 .main-content {
   flex: 1;
+  padding-top: 78px;
+}
+
+@media (max-width: 860px) {
+  .main-content {
+    padding-top: 70px;
+  }
 }
 
 /* Section Background Variations */

@@ -158,7 +158,8 @@
 @media (max-width: 960px) {
   .services-grid-four {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .services-global-cta {
@@ -169,5 +170,74 @@
 
   .services-global-cta .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid-four {
+    gap: 1.15rem;
+  }
+
+  .service-category-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  .card-top-header {
+    gap: 0.65rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .card-icon {
+    font-size: 1.65rem;
+  }
+
+  .category-title {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .category-summary {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+
+  .concerns-tags {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-items-list {
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-item {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    gap: 0.6rem;
+  }
+
+  .check-svg {
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+  }
+
+  .service-disclaimer-note {
+    font-size: 0.76rem;
+    margin-bottom: 0.75rem;
+    padding-top: 0.65rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .service-category-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .concerns-tags {
+    padding: 0.65rem 0.85rem;
   }
 }

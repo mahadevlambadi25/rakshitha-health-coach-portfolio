@@ -14,8 +14,24 @@ export default function Navbar() {
         setIsScrolled(false);
       }
     };
+    const handleResize = () => {
+      if (window.innerWidth > 860) {
+        setMobileMenuOpen(false);
+      }
+    };
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setMobileMenuOpen(false);
+      }
+    };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   const toggleMobileMenu = () => {
