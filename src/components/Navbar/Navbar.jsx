@@ -47,22 +47,15 @@ export default function Navbar() {
       <div className="container navbar-container">
         {/* Brand */}
         <a href="#hero" className="navbar-brand" onClick={closeMobileMenu}>
-          <div className="brand-leaf-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 3C12 3 6 6 6 13C6 16.866 9.134 20 13 20C16.866 20 20 16.866 20 13C20 6 12 3 12 3Z"
-                fill="currentColor"
-                opacity="0.9"
-              />
-              <path
-                d="M12 7V17M12 12L9 10M12 14L15 12"
-                stroke="#FFFFFF"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+          <img
+            src="/images/rakshitha-dutt-logo.jpg"
+            alt="Rakshitha Dutt Health and Wellness"
+            className="navbar-brand-logo"
+            width="52"
+            height="52"
+            loading="eager"
+            decoding="sync"
+          />
           <div className="brand-text">
             <span className="brand-name">{coachData.name}</span>
             <span className="brand-role">

@@ -1,0 +1,343 @@
+/* ==========================================================================
+   Video Testimonials Section - Rakshitha Dutt | Rustic Wisdom
+   ========================================================================== */
+
+.video-testimonials-section {
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  position: relative;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Video Cards Grid
+   -------------------------------------------------------------------------- */
+.video-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.video-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(36, 78, 61, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive 16:9 Video Frame
+   -------------------------------------------------------------------------- */
+.video-frame-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #122119;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-embed-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.video-embed-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: contain;
+  background-color: #000000;
+}
+
+/* --------------------------------------------------------------------------
+   Placeholder Screen (Organic Dark Green / Warm Accent)
+   -------------------------------------------------------------------------- */
+.video-placeholder-screen {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 30%, #1e3f31 0%, #11231b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  text-align: center;
+  position: relative;
+  user-select: none;
+}
+
+.placeholder-badge-chip {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(22, 51, 39, 0.7);
+  backdrop-filter: blur(4px);
+  color: #d1e5db;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.placeholder-play-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.video-card:hover .placeholder-play-circle {
+  transform: scale(1.08);
+  background-color: var(--color-earth);
+  border-color: var(--color-earth);
+  color: #ffffff;
+}
+
+.play-icon-svg {
+  margin-left: 3px; /* visual center for play triangle */
+}
+
+.placeholder-overlay-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.placeholder-main-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+}
+
+.placeholder-sub-label {
+  font-size: 0.78rem;
+  color: #a4c4b5;
+}
+
+/* --------------------------------------------------------------------------
+   Card Body Content
+   -------------------------------------------------------------------------- */
+.video-card-body {
+  padding: 1.5rem 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.video-card-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.85rem;
+}
+
+.video-card-quote {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-forest);
+  line-height: 1.38;
+  margin-bottom: 1rem;
+  font-style: normal;
+}
+
+.video-card-client {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-earth);
+}
+
+.client-dash {
+  opacity: 0.7;
+}
+
+.client-name {
+  font-style: normal;
+}
+
+/* --------------------------------------------------------------------------
+   Consultation CTA Banner
+   -------------------------------------------------------------------------- */
+.video-testimonials-cta {
+  width: 100%;
+}
+
+.video-cta-card {
+  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-primary-subtle) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.video-cta-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-forest);
+  line-height: 1.25;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.01em;
+}
+
+.video-cta-subtext {
+  font-size: clamp(0.95rem, 2.5vw, 1.08rem);
+  color: var(--color-text-body);
+  max-width: 580px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.video-cta-action {
+  display: flex;
+  justify-content: center;
+}
+
+.video-cta-btn {
+  box-shadow: var(--shadow-md);
+  gap: 0.75rem;
+}
+
+.video-cta-btn .btn-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.video-cta-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .video-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.75rem;
+  }
+
+  /* Center single orphaned card on tablet */
+  .video-cards-grid .video-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 540px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .video-cta-card {
+    padding: 2.5rem 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .video-cards-grid .video-card:last-child:nth-child(odd) {
+    max-width: 100%;
+  }
+
+  .video-card-body {
+    padding: 1.25rem 1.15rem 1.35rem;
+  }
+
+  .video-card-quote {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .placeholder-play-circle {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.65rem;
+  }
+
+  .placeholder-play-circle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .placeholder-main-label {
+    font-size: 0.88rem;
+  }
+
+  .placeholder-sub-label {
+    font-size: 0.74rem;
+  }
+
+  .video-cta-card {
+    padding: 2rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .video-cta-subtext {
+    margin-bottom: 1.5rem;
+  }
+
+  .video-cta-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .video-card-body {
+    padding: 1.1rem 0.95rem 1.2rem;
+  }
+
+  .video-cta-card {
+    padding: 1.75rem 1rem;
+  }
+}

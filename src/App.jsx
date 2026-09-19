@@ -8,6 +8,7 @@ import HowItWorks from './components/HowItWorks/HowItWorks';
 import Results from './components/Results/Results';
 import Credentials from './components/Credentials/Credentials';
 import Testimonials from './components/Testimonials/Testimonials';
+import VideoTestimonials from './components/VideoTestimonials/VideoTestimonials';
 import VideoSection from './components/VideoSection/VideoSection';
 import SocialMedia from './components/SocialMedia/SocialMedia';
 import Contact from './components/Contact/Contact';
@@ -28,6 +29,7 @@ function App() {
         <Results />
         <Credentials />
         <Testimonials />
+        <VideoTestimonials />
         <VideoSection />
         <SocialMedia />
         <Contact />

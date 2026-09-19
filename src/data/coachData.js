@@ -189,6 +189,49 @@ export const coachData = {
       icon: "🇮🇳",
     },
   ],
+
+  // Video Testimonials (Connected to actual HTML5 video files in public/videos/)
+  videoTestimonials: [
+    {
+      id: "video-testimonial-1",
+      title: "Lost 15kg naturally and built a healthier lifestyle",
+      quote: "Lost 15kg naturally and built a healthier lifestyle",
+      clientName: "Client Story 1",
+      tag: "Weight & Habit Transformation",
+      videoType: "html5",
+      videoSrc: "/videos/WhatsApp Video 2026-09-16 at 12.13.08 PM.mp4",
+      thumbnail: "",
+    },
+    {
+      id: "video-testimonial-2",
+      title: "Managed thyroid & restored everyday energy without starvation",
+      quote: "Managed thyroid & restored everyday energy without starvation",
+      clientName: "Client Story 2",
+      tag: "Thyroid & Energy Balance",
+      videoType: "html5",
+      videoSrc: "/videos/WhatsApp Video 2026-09-16 at 12.41.06 PM.mp4",
+      thumbnail: "",
+    },
+    {
+      id: "video-testimonial-3",
+      title: "Simple Indian home food helped me reverse bloating & acidity",
+      quote: "Simple Indian home food helped me reverse bloating & acidity",
+      clientName: "Client Story 3",
+      tag: "Gut Health & Digestion",
+      videoType: "html5",
+      videoSrc: "/videos/WhatsApp Video 2026-09-19 at 12.30.53 PM.mp4",
+      thumbnail: "",
+    },
+  ],
+
+  // Consultation CTA Section (Immediately below Video Testimonials)
+  consultationCta: {
+    heading: "Ready to Start Your Own Transformation?",
+    subtext: "Take the first step towards a healthier and more sustainable lifestyle.",
+    buttonText: "Book Your Free Consultation",
+    // Replace "#contact" below with your actual URL (e.g. "https://rusticwisdom.in/enquiry/?ref=483390932") when ready
+    buttonHref: "#contact",
+  },
 };
 
 /**
